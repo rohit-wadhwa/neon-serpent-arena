@@ -6,6 +6,9 @@ git history; this file is the human-readable summary.
 The version is shown in-game (bottom-left of the HUD), on the menu footer, and
 baked into shared screenshots and result cards — quote it when reporting a bug.
 
+## 2.14.3
+- **📲 iOS full-screen install + a matching splash.** Followed up the v2.14.2 manifest with the Apple / mobile web-app meta tags, so "Add to Home Screen" on iPhone now launches the game **full-screen** (no Safari bars), with a dark status bar and its own "Serpent Arena" name — the same standalone install Android and Chrome already had. Also aligned the manifest and `theme-color` to the game's real background (`#05060f`), so the launch splash and status bar match the arena exactly instead of being a shade off. Added a `test/check-manifest.js` regression (now part of `npm test`) that validates the manifest, every icon file on disk, and the install meta tags, so the install experience can't silently break.
+
 ## 2.14.2
 - **📲 Installable (PWA).** Added a web app manifest and a set of app icons (192 / 512 PNG, an SVG, and a 180px Apple touch icon), so you can add Neon Serpent Arena to your phone or desktop home screen and launch it from its own icon. On Android / Chrome and desktop it installs and opens in its own **standalone** window (no browser bar); on iPhone, "Add to Home Screen" gives it a proper icon too. Same static site, identical gameplay — and it still needs a connection to play (no offline mode yet). QA'd: the manifest and all icons serve correctly, with no console errors.
 
